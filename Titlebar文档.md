@@ -1,4 +1,5 @@
 #使用说明
+##布局文件中添加的代码
 ```java
   <com.wuba.commons.views.TitleBar
       android:id="@+id/titlebar"
@@ -6,3 +7,15 @@
       android:layout_width="fill_parent"
       android:layout_height="45dp"/>
 ```
+##Activity中使用的代码
+```
+ protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        titleBar=(TitleBar)this.findViewById(R.id.titlebar);
+        titleBar.setCenterTitleTextView("宠物狗");
+        titleBar.setLeftBackBtn(null);
+          titleBar.setRightTxtBtn(null,"忽略");
+  }
+```
+#效果展示
